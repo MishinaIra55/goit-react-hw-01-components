@@ -11,7 +11,7 @@ function getRandomHexColor() {
 
 export default function Statistics (props) {
   const { title, stats } = props;
-console.log(stats);
+
     return (
       <section className={styles.statistics}>
         <h2 className={styles.title}>{title}</h2>

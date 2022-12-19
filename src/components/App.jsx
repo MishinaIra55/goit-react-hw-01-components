@@ -3,7 +3,13 @@ import user from 'assets/user.json';
 
 import Statistics from './Statistics/Statistics';
 import data from 'assets/data.json';
+
+import FriendList from './FriendList/FriendList';
+import friends from 'assets/friends.json';
+
+import FriendListItem from './FriendListItem/FriendListItem';
 export const App = () => {
+
   return (
     <div
       style={{
@@ -32,6 +38,16 @@ export const App = () => {
         title="Upload stats"
         stats={data}
       />
+
+      <FriendList
+        friends={friends}
+      >
+        <FriendListItem
+          avatar={friends.avatar}
+          name={friends.name}
+          isOnline={friends.isOnline}
+        />
+      </FriendList>
     </div>
   );
 };
