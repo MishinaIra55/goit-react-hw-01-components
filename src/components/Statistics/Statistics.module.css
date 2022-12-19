@@ -1,0 +1,40 @@
+
+
+.title {
+  text-transform: uppercase;
+  color: gray;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.item {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+
+
+  width: 100%;
+  height: 100%;
+
+
+}
+.list {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0;
+}
+
+.percentage {
+  font-size: 20px;
+  color: red;
+}
+.label {
+  margin-bottom: 15px;
+  margin-right: 15px;
+  border-radius: 10px;
+}
+.statistics {
+  margin-left: 50px;
+}
