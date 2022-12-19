@@ -6,13 +6,22 @@ import  styles from './FriendListItem.module.css';
 
 
 export default function FriendListItem (props) {
-  const { avatar, name, isOnline  } = props;
+  const { avatar, name, isOnline } = props;
+
+  let colorClass = ''
+  if (isOnline) {
+    colorClass = styles.greenBackground;
+  } else {
+    colorClass = styles.redBackground;
+  }
+
+  console.log('daf', colorClass);
 
   return (
-    <li className="item">
-      <span className="status">{isOnline}</span>
-      <img className="avatar" src={avatar} alt="User avatar" width="48" />
-      <p className="name">{name}</p>
+    <li className={styles.item}>
+      <span className={colorClass + ' ' + styles.status}></span>
+      <img className={styles.avatar} src={avatar} alt="User avatar" width="48" />
+      <p className={styles.name}>{name}</p>
     </li>
   )
 }

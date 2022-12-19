@@ -39,15 +39,7 @@ export const App = () => {
         stats={data}
       />
 
-      <FriendList
-        friends={friends}
-      >
-        <FriendListItem
-          avatar={friends.avatar}
-          name={friends.name}
-          isOnline={friends.isOnline}
-        />
-      </FriendList>
+      <FriendList friends={friends} />
     </div>
   );
 };
