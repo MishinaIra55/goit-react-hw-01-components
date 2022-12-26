@@ -1,0 +1,13 @@
+table {
+  border: 1px solid #ccc;
+  border-spacing: 3px;
+  margin: auto;
+  width: 100%;
+}
+
+td, th{
+  border: solid 1px #ccc;
+  vertical-align: bottom;
+  height: 30px;
+  font-size: 20px;
+}

@@ -26,8 +26,6 @@ export default function Statistics (props) {
                     }}>
                   <span className={styles.label}>{stat.label}</span>
                   <span className={styles.percentage}>{stat.percentage + '%'}</span>
-
-
                 </li>
               )
             })

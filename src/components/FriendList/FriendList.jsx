@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+
 import styles from './FriendList.module.css';
 import FriendListItem from '../FriendListItem/FriendListItem';
 

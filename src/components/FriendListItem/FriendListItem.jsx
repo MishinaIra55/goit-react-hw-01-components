@@ -15,7 +15,7 @@ export default function FriendListItem (props) {
     colorClass = styles.redBackground;
   }
 
-  console.log('daf', colorClass);
+
 
   return (
     <li className={styles.item}>

@@ -8,15 +8,17 @@ import FriendList from './FriendList/FriendList';
 import friends from 'assets/friends.json';
 
 import FriendListItem from './FriendListItem/FriendListItem';
+import TransactionHistory from './TransactionHistory/TransactionHistory';
+import transactions from 'assets/transactions.json';
 export const App = () => {
 
   return (
     <div
       style={{
         height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
+        // display: 'flex',
+        // justifyContent: 'center',
+        // alignItems: 'center',
         fontSize: 40,
         color: '#010101',
         padding:50,
@@ -40,6 +42,7 @@ export const App = () => {
       />
 
       <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
     </div>
   );
 };
