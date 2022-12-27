@@ -7,7 +7,7 @@ import data from 'assets/data.json';
 import FriendList from './FriendList/FriendList';
 import friends from 'assets/friends.json';
 
-import FriendListItem from './FriendListItem/FriendListItem';
+
 import TransactionHistory from './TransactionHistory/TransactionHistory';
 import transactions from 'assets/transactions.json';
 export const App = () => {
