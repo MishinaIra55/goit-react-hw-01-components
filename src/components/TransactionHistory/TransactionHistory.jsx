@@ -7,8 +7,8 @@ export default function TransactionHistory ( props ) {
   const transaction = items.map(item => {
     return (
 
-    <tr>
-      <td>{item.type}</td>
+    <tr key={item.id}>
+      <td>{item.type} </td>
       <td>{item.amount}</td>
       <td>{item.currency }</td>
     </tr>
@@ -16,7 +16,7 @@ export default function TransactionHistory ( props ) {
   })
 
   return (
-    <table className={styles.transaction}>
+    <table >
       <thead>
       <tr>
         <th>Type</th>
