@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import  styles from './FriendListItem.module.css';
 
 
-export default function FriendListItem (props) {
-  const { avatar, name, isOnline } = props;
+export default function FriendListItem ( { avatar, name, isOnline } ) {
+
 
   let colorClass = ''
   if (isOnline) {
@@ -12,8 +12,6 @@ export default function FriendListItem (props) {
   } else {
     colorClass = styles.redBackground;
   }
-
-
 
   return (
     <li className={styles.item}>
@@ -27,5 +25,6 @@ export default function FriendListItem (props) {
 FriendListItem.propTypes = {
   avatar: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  isOnline: PropTypes.bool,
+  isOnline: PropTypes.bool.isRequired,
+
 }

@@ -9,29 +9,29 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-export default function Statistics (props) {
-  const { title, stats } = props;
+export default function Statistics ( { title, stats } ) {
+
 
     return (
       <section className={styles.statistics}>
-        <h2 className={styles.title}>{title}</h2>
+        { title && <h2 className={styles.title}>{title}</h2>}
+
 
         <ul className={styles.list}>
           {
-            stats.map((stat) => {
+            stats.map(( { id, label, percentage} ) => {
+
               return (
-                <li className={styles.item} key={stat.id}
+                <li className={styles.item} key={id}
                     style={{
                       backgroundColor: getRandomHexColor(),
                     }}>
-                  <span className={styles.label}>{stat.label}</span>
-                  <span className={styles.percentage}>{stat.percentage + '%'}</span>
+                  <span className={styles.label}>{label}</span>
+                  <span className={styles.percentage}>{percentage + '%'}</span>
                 </li>
               )
             })
           }
-
-
         </ul>
       </section>
     )
@@ -39,7 +39,13 @@ export default function Statistics (props) {
 
 Statistics.propTypes = {
   title: PropTypes.string,
-  stats: PropTypes.array
+  stats: PropTypes.arrayOf (
+    PropTypes.shape({
+      id: PropTypes.string,
+      label: PropTypes.string,
+      percentage: PropTypes.number
+    })
+  )
 }
 
 
